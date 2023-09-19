@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="dark light" />
-    <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/dark.css" />
@@ -19,13 +19,14 @@
 
   <body class="page">
     <header class="header decorated-zone">
+      <span class="header__rec"></span>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
             <button
               class="header__theme-menu-button header__theme-menu-button_type_light"
             >
-              День
+              день
             </button>
           </li>
           <li class="header__theme-menu-item">
@@ -33,14 +34,14 @@
               class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
               disabled
             >
-              Авто
+              авто
             </button>
           </li>
           <li class="header__theme-menu-item">
             <button
               class="header__theme-menu-button header__theme-menu-button_type_dark"
             >
-              Неон
+              неон
             </button>
           </li>
         </ul>
@@ -62,7 +63,7 @@
               важные. Где же легендарная многозадачность, когда она так нужна
               вам (и всем нанимающим менеджерам этого мира)? А дело в том, что
               её просто не существует. Исследователи
-              <a target="_blank" class="link">выяснили</a>, что мозгу тяжело
+              <a href="#0" target="_blank" class="link">выяснили</a>, что мозгу тяжело
               концентрироваться даже на двух делах одновременно. А когда в поле
               внимания попадает несколько важных задач, организм паникует и
               выделяет кортизол и адреналин — «гормоны стресса». Из-за этого мы
@@ -162,14 +163,14 @@
           </li>
           <li class="how__list-item">
             <h3 class="how__list-item_title title title-decor">Прогуляйтесь</h3>
-            <pv
+            <p class="how__list-item_text"
               >Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
               показал, что созерцание природы повышает концентрацию, в то время
               как после просмотра городских пейзажей она наоборот понижается.
               Можно совместить прогулку с физическими упражнениями или бегом —
               так в мозг поступит ещё больше кислорода и он будет лучше
               работать. Но и простая двадцатиминутная прогулка — тоже отличный
-              вариант.</pv
+              вариант.</p
             >
           </li>
           <li class="how__list-item">
@@ -195,9 +196,16 @@
       </section>
       <section class="pics">
         <h2 class="pics__header title title-decor">А можно в картинках?</h2>
+        <div class="pics__gallery">
+          <img class="pics__gallery_item" src="./images/sunset.png">
+          <img class="pics__gallery_item" src="./images/ice-cream.png">
+          <img class="pics__gallery_item" src="./images/tape.png">
+          <img class="pics__gallery_item" src="./images/books.png">
+          <img class="pics__gallery_item" src="./images/street.png">
+        </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer decorated-zone">
       <h2 class="footer__big-header big-header">focus</h2>
     </footer>
     <script src="./scripts/script.js"></script>
