@@ -3,3 +3,112 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
+
+.header {
+}
+.decorated-zone {
+}
+.header__theme-menu {
+}
+.header__theme-menu-list {
+}
+.header__theme-menu-item {
+}
+.header__theme-menu-button {
+}
+.header__theme-menu-button_type_light {
+}
+.header__theme-menu-button_active {
+}
+.header__theme-menu-button_type_auto {
+}
+.header__theme-menu-button_type_dark {
+}
+.header__big-header {
+}
+.big-header {
+}
+.header__title {
+}
+.title {
+  color: #000028;
+  font-family: IBM Plex Mono, sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.title-decor {
+  background: #FF0070;
+}
+
+.main {
+  color: #F1B2CE;
+  font-family: IBM Plex Mono, sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+.why {
+}
+.why__header, .what__header, .how__header {
+  color: #FF0070;
+  font-weight: 700;
+  line-height: 130%;
+}
+.why__list {
+}
+.why__list-item {
+}
+.why__list-item_title {
+}
+.why__list-item_text {
+}
+.link {
+}
+.what {
+}
+.what__header {
+}
+.what__list {
+}
+.what__list-item {
+}
+.what__list-item_title {
+}
+.what__list-item_text {
+}
+.how {
+}
+.how__header {
+}
+.how__text {
+}
+.how__list {
+}
+.how__list-item {
+}
+.how__list-item_title {
+}
+.how__list-item_text {
+}
+.pics {
+}
+.footer {
+}
+.footer__big-header {
+}
+
+@media (max-width: 375px) { /* мобилки */
+
+}
+
+@media (max-width: 375px) { /* планшеты */
+  
+}
+
+@media (max-width: 375px) { /* десктоп */
+  
+}
