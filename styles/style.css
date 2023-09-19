@@ -2,11 +2,19 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: IBM Plex Mono, sans-serif;
+  background-image: url(../images/cover-image-dark.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .header {
+
 }
 .decorated-zone {
+  
 }
 .header__theme-menu {
 }
@@ -25,14 +33,21 @@
 .header__theme-menu-button_type_dark {
 }
 .header__big-header {
+  text-shadow: 4px 4px 0px #FF0070;
+  padding: 4.06rem 0 3.44rem 0;
 }
 .big-header {
+  color: #DB00FF;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%; /* 5.98125rem */
 }
 .header__title {
+  margin-bottom: 4.13rem;
 }
 .title {
   color: #000028;
-  font-family: IBM Plex Mono, sans-serif;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 700;
@@ -45,7 +60,6 @@
 
 .main {
   color: #F1B2CE;
-  font-family: IBM Plex Mono, sans-serif;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
@@ -99,6 +113,7 @@
 .footer {
 }
 .footer__big-header {
+  text-shadow: 2px 2px 0px #FF0070;
 }
 
 @media (max-width: 375px) { /* мобилки */
