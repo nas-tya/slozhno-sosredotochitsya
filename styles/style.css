@@ -21,7 +21,6 @@
 }
 
 .header {
-  /* padding: 0 0.625rem 4.13rem 0.625rem; */
   padding: 0 0.625rem 0 0.625rem;
   height: 100vh;
 }
@@ -245,7 +244,6 @@
 }
 
 @media (768px <= width < 1024px) {
-
   /* планшеты */
   .decorated-zone::before {
     top: 1.25rem;
@@ -374,7 +372,6 @@
 }
 
 @media (width >=1024px) {
-
   /* десктоп */
   .header {
     padding: 0 0 8rem;
