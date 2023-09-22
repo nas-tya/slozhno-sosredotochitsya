@@ -22,6 +22,7 @@
 
 .header {
   padding: 0 0.625rem 4.13rem 0.625rem;
+  height: 100vh;
 }
 
 .decorated-zone {
@@ -505,6 +506,7 @@
   }
 
   .footer {
+    height: 100vh;
     margin-top: 3.75rem;
     padding: 19.94rem 17.25rem 19.94rem 17.31rem;
   }
