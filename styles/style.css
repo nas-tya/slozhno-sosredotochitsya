@@ -9,6 +9,7 @@
 } */
 
 .page {
+  margin: 0 auto;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   font-family: 'IBM Plex Mono', 'Courier', monospace;
   background-color: var(--background-color);
@@ -17,12 +18,11 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  margin: 0 auto;
 }
 
 .header {
-  padding: 0 0.625rem 0 0.625rem;
   height: 100vh;
+  padding: 0 0.625rem 0 0.625rem;
 }
 
 .decorated-zone {
@@ -91,8 +91,6 @@
 }
 
 .header__theme-menu-button {
-  appearance: none;
-  cursor: pointer;
   height: 26px;
   border: none;
   padding: 0px 13px;
@@ -103,6 +101,8 @@
   line-height: 1.125rem;
   text-align: center;
   background-color: transparent;
+  cursor: pointer;
+  appearance: none;
 }
 
 .header__theme-menu-button:hover {
@@ -208,8 +208,8 @@
 .pics__gallery {
   display: flex;
   flex-direction: column;
-  gap: 0.62rem;
   align-items: center;
+  gap: 0.62rem;
 }
 
 .pics__gallery_item {
@@ -229,8 +229,8 @@
 }
 
 .link {
-  text-shadow: 2px 2px 0 var(--accent-color);
   text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .link:hover {
@@ -246,15 +246,15 @@
   outline: 1px solid var(--text-color);
 }
 
-@media (768px <= width) {
+@media (768px <=width) {
   .decorated-zone::before {
     top: 20px;
     right: 20px;
   }
 
   .decorated-zone::after {
-    left: 20px;
     bottom: 20px;
+    left: 20px;
   }
 
   .header__rec {
@@ -286,6 +286,7 @@
     height: 1.49525rem;
     margin: 0;
   }
+
   .pics__header {
     margin-bottom: 1.25rem;
   }
@@ -328,7 +329,8 @@
   }
 }
 
-@media (768px <= width < 1024px) {
+@media (768px <=width < 1024px) {
+
   /* планшеты */
   .header__theme-menu-list {
     align-items: end;
@@ -377,7 +379,8 @@
   }
 }
 
-@media (width >= 1024px) {
+@media (width >=1024px) {
+
   /* десктоп */
   .header {
     padding: 0 0 8rem;
