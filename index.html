@@ -19,7 +19,7 @@
 
   <body class="page">
     <header class="header decorated-zone">
-      <span class="header__rec" aria-hidden="true"></span>
+      <span class="header__rec" aria-hidden="true">REC</span>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -52,16 +52,18 @@
         Или почему нам так сложно сконцентрироваться, особенно когда очень
         надо</p
       > -->
-      <p class="header__title title title-decor"
+      <div class="header__title title title-decor">
+      <p
         >Что делать, когда не можешь делать ничего</p
       >
-      <p class="header__title title title-decor"
+      <p
         >Или почему нам так сложно сконцентрироваться, особенно когда очень
         надо</p
       >
+      </div>
     </header>
     <main class="main">
-      <section class="why">
+      <section class="why flex-columns">
         <h2 class="why__header">Почему сосредоточиться так сложно</h2>
         <ul class="why__list">
           <li class="why__list-item">
@@ -73,7 +75,7 @@
               важные. Где же легендарная многозадачность, когда она так нужна
               вам (и всем нанимающим менеджерам этого мира)? А дело в том, что
               её просто не существует. Исследователи
-              <a href="#0" target="_blank" class="link">выяснили</a>, что мозгу
+              <a href="https://dana.org/article/multicosts-of-multitasking/" target="_blank" rel="noopener noreferrer" class="link">выяснили</a>, что мозгу
               тяжело концентрироваться даже на двух делах одновременно. А когда
               в поле внимания попадает несколько важных задач, организм паникует
               и выделяет кортизол и адреналин — «гормоны стресса». Из-за этого
@@ -136,18 +138,18 @@
           </li>
         </ul>
       </section>
-      <section class="how">
+      <section class="how flex-columns">
         <h2 class="how__header"
           >Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
           секунд)</h2
         >
-        <p class="how__text title title-decor"
-          >5 простых (на самом деле не очень) советов</p
+        <h3 class="how__text title title-decor"
+          >5 простых (на самом деле не очень) советов</h3
         >
         <ul class="how__list">
           <li class="how__list-item">
-            <h3 class="how__list-item_title title title-decor"
-              >Представьте небо и облака</h3
+            <h4 class="how__list-item_title title title-decor"
+              >Представьте небо и облака</h4
             >
             <p class="how__list-item_text"
               >Или листья в ручье. Тут дело в лёгкой медитации, которая помогает
@@ -161,8 +163,8 @@
             >
           </li>
           <li class="how__list-item">
-            <h3 class="how__list-item_title title title-decor"
-              >Включите музыку</h3
+            <h4 class="how__list-item_title title title-decor"
+              >Включите музыку</h4
             >
             <p class="how__list-item_text"
               >Но не любую, и не любимую. Любимая может быть связана с сильными
@@ -172,10 +174,10 @@
             >
           </li>
           <li class="how__list-item">
-            <h3 class="how__list-item_title title title-decor">Прогуляйтесь</h3>
+            <h4 class="how__list-item_title title title-decor">Прогуляйтесь</h4>
             <p class="how__list-item_text"
               >Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
-              <a href="#0" class="link" target="_blank">показал</a>, что
+              <a href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328" class="link" target="_blank"  rel="noopener noreferrer">показал</a>, что
               созерцание природы повышает концентрацию, в то время как после
               просмотра городских пейзажей она наоборот понижается. Можно
               совместить прогулку с физическими упражнениями или бегом — так в
@@ -184,7 +186,7 @@
             >
           </li>
           <li class="how__list-item">
-            <h3 class="how__list-item_title title title-decor">Хорошо ешьте</h3>
+            <h4 class="how__list-item_title title title-decor">Хорошо ешьте</h3>
             <p class="how__list-item_text"
               >Мы — не ваша бабушка, но это правда важно. Выбирайте продукты,
               которые препятствуют резким скачкам сахара в крови. Например, с
@@ -194,7 +196,7 @@
             >
           </li>
           <li class="how__list-item">
-            <h3 class="how__list-item_title title title-decor">Читайте</h3>
+            <h4 class="how__list-item_title title title-decor">Читайте</h4>
             <p class="how__list-item_text"
               >Настоящие бумажные книги. Это правда помогает с концентрацией:
               чтобы прочитать пост в соцсети, достаточно нескольких минут или

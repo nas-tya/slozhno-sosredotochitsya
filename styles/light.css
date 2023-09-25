@@ -34,6 +34,10 @@
     --logo-color: #ffc2e6;
     --background-image: url(../images/cover-image-light.png);
   }
+
+  .header__rec {
+    display: none;
+  }
 }
 
 .theme_light .header__rec {

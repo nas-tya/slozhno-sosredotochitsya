@@ -10,7 +10,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  font-family: IBM Plex Mono, sans-serif;
+  font-family: 'IBM Plex Mono', 'Courier', monospace;
   background-color: var(--background-color);
   background-image: var(--background-image);
   background-repeat: no-repeat;
@@ -32,8 +32,8 @@
 .decorated-zone::after {
   content: "";
   position: absolute;
-  bottom: 1.25rem;
-  left: 0.625rem;
+  bottom: 10px;
+  left: 10px;
   width: 1.56475rem;
   height: 1.56263rem;
   border-bottom: 1px solid var(--corners-color);
@@ -43,8 +43,8 @@
 .decorated-zone::before {
   content: "";
   position: absolute;
-  top: 0.625rem;
-  right: 0.625rem;
+  top: 10px;
+  right: 10px;
   width: 1.56475rem;
   height: 1.56263rem;
   border-top: 1px solid var(--corners-color);
@@ -52,27 +52,21 @@
 }
 
 .header__rec {
-  position: relative;
-}
-
-.header__rec::after {
-  content: "REC";
   position: absolute;
-  top: 0.625rem;
-  left: 18.38rem;
+  top: 10px;
+  right: 38px;
   color: var(--accent-color);
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.5625rem;
-  /* 138.889% */
   text-align: center;
 }
 
-.header__rec::before {
+.header__rec::after {
   content: "";
   position: absolute;
-  top: 1.2rem;
-  left: 21.08rem;
+  top: 8px;
+  left: 42px;
   width: 0.5625rem;
   height: 0.5625rem;
   border-radius: 50%;
@@ -97,6 +91,8 @@
 }
 
 .header__theme-menu-button {
+  appearance: none;
+  cursor: pointer;
   height: 26px;
   border: none;
   padding: 0px 13px;
@@ -111,7 +107,6 @@
 
 .header__theme-menu-button:hover {
   outline: 1px solid var(--buttons-color);
-  cursor: pointer;
 }
 
 .header__theme-menu-button:focus {
@@ -164,7 +159,12 @@
   font-weight: 400;
   font-size: 1.125rem;
   font-style: normal;
-  line-height: 130%;
+  line-height: 1.4625rem;
+}
+
+.flex-columns {
+  display: flex;
+  flex-direction: column;
 }
 
 .why__header,
@@ -217,8 +217,11 @@
 }
 
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin-top: 2.5rem;
-  padding: 17.87rem 0.81rem 17.81rem 0.87rem;
 }
 
 .footer__big-header {
@@ -240,51 +243,27 @@
 }
 
 .link:focus-visible {
-  border: 1px solid var(--text-color);
+  outline: 1px solid var(--text-color);
 }
 
-@media (768px <= width < 1024px) {
-  /* планшеты */
+@media (768px <= width) {
   .decorated-zone::before {
-    top: 1.25rem;
-    right: 1.25rem;
+    top: 20px;
+    right: 20px;
   }
 
   .decorated-zone::after {
-    left: 1.325rem;
+    left: 20px;
+    bottom: 20px;
   }
 
-  .header__rec::after {
-    top: 1.25rem;
-    left: 42.95rem;
-  }
-
-  .header__rec::before {
-    top: 1.8rem;
-    left: 45.7rem;
-  }
-
-  .header__theme-menu-list {
-    align-items: end;
-    margin-top: 7.25rem;
-  }
-
-  .header {
-    padding-bottom: 10.9rem;
-    padding-left: 0;
+  .header__rec {
+    top: 20px;
+    right: 48px;
   }
 
   .big-header {
-    font-size: (7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-
-  .header__big-header {
-    padding: 11rem 0 10rem 0;
-  }
-
-  .header__title {
-    margin-right: 0.5rem;
-    margin-left: 24rem;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .main {
@@ -293,37 +272,20 @@
     padding: 0 1.25rem;
   }
 
-  .why,
-  .how {
-    display: flex;
+  .flex-columns {
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: end;
     gap: 1.25rem;
   }
 
-  .why__header,
-  .what__header,
-  .how__header {
-    width: 14.75rem;
-  }
-
-  .why__list,
-  .how__list {
-    width: 29.5rem;
-  }
-
   .how__text {
     display: block;
     flex-shrink: 1;
-    width: 29.5rem;
+    width: 40.55738rem;
     height: 1.49525rem;
     margin: 0;
   }
-
-  .how__list {
-    margin-top: -5.55rem;
-  }
-
   .pics__header {
     margin-bottom: 1.25rem;
   }
@@ -331,7 +293,6 @@
   .pics__gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 12rem 14.375rem 19.875rem;
     grid-template-areas:
       "sunset sunset ice-cream"
       "tape books ice-cream"
@@ -363,37 +324,63 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+  }
+}
+
+@media (768px <= width < 1024px) {
+  /* планшеты */
+  .header__theme-menu-list {
+    align-items: end;
+    margin-top: 7.25rem;
+  }
+
+  .header {
+    padding-bottom: 10.9rem;
+    padding-left: 0;
+  }
+
+  .header__big-header {
+    padding: 11rem 0 10rem 0;
+  }
+
+  .header__title {
+    margin-right: 0.5rem;
+    margin-left: 24rem;
+  }
+
+  .why__header,
+  .what__header,
+  .how__header {
+    width: 14.75rem;
+  }
+
+  .why__list,
+  .how__list {
+    width: 29.5rem;
+  }
+
+  .how__text {
+    width: 29.5rem;
+  }
+
+  .how__list {
+    margin-top: -5.55rem;
+  }
+
+  .pics__gallery {
+    grid-template-rows: 12rem 14.375rem 19.875rem;
   }
 
   .footer {
     margin-top: 3.75rem;
-    padding: 28.94rem 12.75rem 28.2rem 12.75rem;
   }
 }
 
-@media (width >=1024px) {
+@media (width >= 1024px) {
   /* десктоп */
   .header {
     padding: 0 0 8rem;
-  }
-
-  .decorated-zone::before {
-    top: 1.25rem;
-    right: 1.25rem;
-  }
-
-  .decorated-zone::after {
-    left: 1.325rem;
-  }
-
-  .header__rec::after {
-    top: 1.25rem;
-    left: 59rem;
-  }
-
-  .header__rec::before {
-    top: 1.8rem;
-    left: 61.7rem;
   }
 
   .header__theme-menu {
@@ -405,30 +392,12 @@
     justify-content: center;
   }
 
-  .big-header {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-
   .header__big-header {
     padding: 17rem 0 7.13rem;
   }
 
   .header__title {
     margin: 0 1.25rem 0 32.06rem;
-  }
-
-  .main {
-    gap: 5rem;
-    margin-top: 3.7rem;
-    padding: 0 1.25rem;
-  }
-
-  .why,
-  .how {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: end;
-    gap: 1.25rem;
   }
 
   .why__header,
@@ -451,61 +420,18 @@
   }
 
   .how__text {
-    display: block;
-    flex-shrink: 1;
     width: 40.55738rem;
-    height: 1.49525rem;
-    margin: 0;
   }
 
   .how__list {
     margin-top: -4.1rem;
   }
 
-  .pics__header {
-    margin-bottom: 1.25rem;
-  }
-
   .pics__gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 16.25rem 19.6875rem 26.75rem;
-    grid-template-areas:
-      "sunset sunset ice-cream"
-      "tape books ice-cream"
-      "tape street street";
-    gap: 1.25rem;
-  }
-
-  .sunset {
-    grid-area: sunset;
-  }
-
-  .ice-cream {
-    grid-area: ice-cream;
-  }
-
-  .tape {
-    grid-area: tape;
-  }
-
-  .books {
-    grid-area: books;
-  }
-
-  .street {
-    grid-area: street;
-  }
-
-  .pics__gallery_item {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 
   .footer {
-    height: 100vh;
     margin-top: 4rem;
-    padding: 19.94rem 17.25rem 19.94rem 17.31rem;
   }
 }
